@@ -1,0 +1,56 @@
+{% extends "base.html" %} {% block title %}Home{% endblock %} {% block content
+%}
+<h1 align="center">Enter Text to Encrypt</h1>
+
+
+<form method="POST">
+  <textarea name="note" id="note" class="form-control"></textarea>
+  <br />
+  <input type="hidden" name="type" value="1" />
+  <div align="center">
+    <button type="submit" class="btn btn-primary">Encrypt</button>
+  </div>
+</form>
+
+<form method="POST">  
+  <textarea name="note" id="note" class="form-control"></textarea>
+  <br />
+  <input type="hidden" name="type" value="0" />
+  <div align="center">
+    <button type="submit" class="btn btn-primary">Decrypt</button>
+  </div>
+</form>
+{% if cipher %}
+<input type="text" value="{{cipher}}" id="myInput" style="width:auto">
+{% endif %}
+{% if plain_text %}
+<input type="text" value="{{plain_text}}" id="myInput">
+{% endif %}
+<button onclick="myFunction()">Copy String</button>
+
+
+<div class="tooltip">
+<button onclick="myFunction()" onmouseout="outFunc()">
+<span class="tooltiptext" id="myTooltip">Copy to clipboard</span>
+    Copy String
+</button>
+</div>
+  
+<script>
+  function myFunction() {
+    var copyText = document.getElementById("myInput");
+    copyText.select();
+    copyText.setSelectionRange(0, 99999);
+    navigator.clipboard.writeText(copyText.value);
+    
+    var tooltip = document.getElementById("myTooltip");
+    tooltip.innerHTML = "Copied: " + copyText.value;
+  }
+  
+  function outFunc() {
+    var tooltip = document.getElementById("myTooltip");
+    tooltip.innerHTML = "Copy to clipboard";
+  }
+</script>
+
+{% endblock %}
