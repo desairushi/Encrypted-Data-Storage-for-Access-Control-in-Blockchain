@@ -21,3 +21,4 @@ Contact for more information.
 
 https://user-images.githubusercontent.com/53125151/233697291-13f7156b-df2a-4a2a-b9b5-31d51c4cdb88.mp4
 
+![Sequece Diagram](https://user-images.githubusercontent.com/53125151/233702186-2e7858db-a269-4228-a9e9-8abf169bb1e0.png)
