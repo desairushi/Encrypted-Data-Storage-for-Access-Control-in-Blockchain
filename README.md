@@ -9,7 +9,7 @@ RSA 1024 is used to generate key pair of public and private key when user signup
 
 The Flask app then allows user to select public key of the receipient (taken from database) and encrypts the data (data can be anything , it will can be coverted to hex values) and then can be uploaded on the blockchain. only the intended recepient will be able see the data on thier flask app. using blockchain negets the possibilty of repudiation.
 
-Please note this is just a proof of concept and may introduce vulneribility in code. The blockchain of choice for this project was Multichain.
+Please note this is just a proof of concept and may introduce vulneribility in the code. The blockchain of choice for this project was Multichain.
 
 The Future work will include direct integration with any blockchain which uses json-rpc , improved public key exchange, and full network configuration guide to successfully and securly implement in an ORG. 
 
